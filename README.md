@@ -35,3 +35,15 @@ Practice css
 ##                                                                          --->|                     The visual format
 ##                        - Process final css Values                                                  model    
    
+
+# CSS value processing: what do you need to know
+     Browsers specify a root font-size for each page(usually 16px)
+     Percentages and relative values always converted to pixed( like: font-size: 150% (parent: 24px) ->  150*24 = 36px)
+     Percentages are measured relative to their parent's WIDTH, if used to specify lengths( like: width: 60% (parent: 200px) ->  200*0.6 = 120px)
+     EM are measured relative to their 'parent' font-size, if used to specify font-size;
+     EM are measured relative to the 'current' font-size; if used to specify lengths;
+     REM are always measured relative to the document's root font-size;
+     VH and VW are simple percentage measurements of the viewport' height and with;
+
+
+ 
