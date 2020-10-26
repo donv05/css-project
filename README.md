@@ -29,11 +29,10 @@ Practice css
 
 # What happends to css when we load up a webpage?
 
-1.Load HTML-> 2.Parse HTML -------- -------> Document Object Model(DOM) ------->|
-          |                                                                     |
-          2.Load CSS -> Resolve conflicting CSS declarations(cascade)           | -> Render Tree ->    Website rendering: 
-                                                                         --->   |                       The visual format
-                        Process final css Values                                                        model    
+1.Load HTML     -0----> (2)
+2.Parse HTML    -0----> Document Object Model(DOM) (3)
+2.Load CSS      -0----> Resolve conflicting CSS declarations(cascade) and Process final css Values (3)
+3.Render Tree   -0----> Website rendering:The visual format model
 
 # CSS value processing: what do you need to know
      Browsers specify a root font-size for each page(usually 16px)
@@ -43,6 +42,3 @@ Practice css
      EM are measured relative to the 'current' font-size; if used to specify lengths;
      REM are always measured relative to the document's root font-size;
      VH and VW are simple percentage measurements of the viewport' height and with;
-
-
- 
