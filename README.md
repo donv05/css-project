@@ -29,12 +29,11 @@ Practice css
 
 # What happends to css when we load up a webpage?
 
-## 1.Load HTML-> 2.Parse HTML -------- -------> Document Object Model(DOM) ------->|
-##           |                                                                  |
-##           2.Load CSS ->  -Resolve conflicting CSS declarations(cascade)       | -> Render Tree ->   Website rendering: 
-##                                                                          --->|                     The visual format
-##                        - Process final css Values                                                  model    
-   
+1.Load HTML-> 2.Parse HTML -------- -------> Document Object Model(DOM) ------->|
+          |                                                                     |
+          2.Load CSS -> Resolve conflicting CSS declarations(cascade)           | -> Render Tree ->    Website rendering: 
+                                                                         --->   |                       The visual format
+                        Process final css Values                                                        model    
 
 # CSS value processing: what do you need to know
      Browsers specify a root font-size for each page(usually 16px)
