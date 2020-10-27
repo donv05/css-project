@@ -1,0 +1,22 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "Practice css # Three pillars to write good html and css.. and build good websites",
+  "main": "n",
+  "scripts": {
+    "test": "n"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/donv05/css-project.git"
+  },
+  "author": "do nguyen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/donv05/css-project/issues"
+  },
+  "homepage": "https://github.com/donv05/css-project#readme",
+  "dependencies": {
+    "sass": "^1.27.0"
+  }
+}

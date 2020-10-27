@@ -1,0 +1,27 @@
+// Abstracts file
+@use './abstracts/function';
+@use './abstracts/mixin';
+@use './abstracts/_variables.css';
+
+
+// Base
+@use './base/base';
+@use './base/animation';
+@use './base/typography';
+@use './base/utilities';
+
+// Component 
+
+@use './components/button';
+
+// Layout 
+
+@use './layout/header';
+
+// Page 
+@use './pages/header' as *;
+
+
+//sass sass/main.scss css/style.css
+
+
