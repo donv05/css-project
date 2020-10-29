@@ -5,7 +5,7 @@
         <!-- Define the character set used -->
         <meta charset="UTF-8">
         <!-- Refresh document every 30 seconds -->
-        <meta http-equiv="refresh" content="60">
+        <meta http-equiv="refresh" content="">
         <meta name="keywords" content="HTML, CSS, JavaScript">
         <!-- Define a description of your web page: -->
         <meta name="description" content="Free Web tutorials">
@@ -14,7 +14,7 @@
         
         <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
-        <link src="./css/style.css"></link>
+        <link rel="stylesheet" href="./css/style.css">
         <title>TOUR | Exciting tour for adventurous people</title>
         
     </head>
@@ -22,11 +22,56 @@
     <!-- Body -->
     <body>
         <!--Head-->
-        <head class="header">
-            Some text....
-        </head>
+        <header class="header">
+            <div class="header__logo-box">
+                <!-- <img src="" alt="logo" class="header__logo"> -->
+            </div>
+            <div class="header__text-box">
+                <h1 class="heading-primary">
+                    <span class="heading-primary__main">Outdoors</span>
+                    <span class="heading-primary__sub">is where life happens</span>
+                </h1>
+                <a href="#" class="btn btn--white btn--animation">Discover</a>
+            </div>
+        </header>
+
+        <!-- main -->
         <main>
-            Some text...
+            <section class="section-about">
+                <div class="u-center-text u-margin-bottom-8">
+                    <h2 class="heading-secondary">
+                        Exciting Tours For Adventurous People
+                    </h2>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <h3 class="heading-tertiary u-margin-bottom-small">
+                            You're are going to fall in love with nature
+                        </h3>
+                        <p class="paragraph u-margin-bottom-normal">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt cumque distinctio ducimus debitis eos iure excepturi mollitia beatae ipsa corporis, blanditiis ullam repellendus eligendi perferendis porro nulla! Soluta, quo reprehenderit!
+                        </p>
+                        <h3 class="heading-tertiary u-margin-bottom-small">
+                            Live adventures like you never have before
+                        </h3>
+                        <p class="paragraph u-margin-bottom-normal">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, nesciunt? Ipsam quia eaque neque nemo explicabo non esse itaque possimus sapiente voluptas optio delectus soluta velit dolorum, ipsum alias. Tempora?
+                        </p>
+                        
+                        <!-- Read more button -->
+                        <a href="#" class="btn-text">Learn more &rarr;</a>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="composition">
+                            <img src="./img/natural.jpg" alt="photo-1" class="composition__photo composition__photo--p1">
+                            <img src="./img/natural-1.jpg" alt="photo-1" class="composition__photo composition__photo--p2">
+                            <img src="./img/natural-2.jpg" alt="photo-1" class="composition__photo composition__photo--p3">
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
         </main>
 
     </body>

@@ -1,7 +1,7 @@
 // Abstracts file
 @use './abstracts/function';
 @use './abstracts/mixin';
-@use './abstracts/_variables.css';
+@use './abstracts/variables';
 
 
 // Base
@@ -13,13 +13,16 @@
 // Component 
 
 @use './components/button';
+@use './components/composition' as *;
 
 // Layout 
 
 @use './layout/header';
+@use './layout/grid';
 
 // Page 
 @use './pages/header' as *;
+@use './pages/home' as *;
 
 
 //sass sass/main.scss css/style.css

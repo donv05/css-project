@@ -42,3 +42,9 @@ Practice css
      EM are measured relative to the 'current' font-size; if used to specify lengths;
      REM are always measured relative to the document's root font-size;
      VH and VW are simple percentage measurements of the viewport' height and with;
+
+
+# Layout Types
+    FLOAT LAYOUT
+    FLEX BOX
+    CSS GRID

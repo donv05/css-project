@@ -1,0 +1,4 @@
+@mixin hover-zoom {
+    z-index: 20;
+    transform: scale(1.2, 1.2);
+}

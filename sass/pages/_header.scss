@@ -1,3 +1,47 @@
+@use '../base/base' as *;
+@use '../base/animation';
+@use '../abstracts/variables' as *;
+
 .header {
-    background-image: url('/img/my-icon.jpeg');
+    background-image: linear-gradient(
+        to right bottom, #e13b3b54, #79d4f0),
+        url('../../img/my-icon.jpeg');
+    height: 95vh;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%);
+}
+
+.header__text-box {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 40%;
+    width: max-content;
+    text-align: center;
+    
+}
+
+.heading-primary {
+    color: $color-white;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+}
+
+.heading-primary__main {
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: 3.1rem;
+    display: block;
+    animation: moveToRight 5s backwards;
+    // animation-timing-function: ease;
+}
+
+.heading-primary__sub {
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 1.4rem;
+    display: block;
+    animation: moveToLeft 5s backwards;
 }

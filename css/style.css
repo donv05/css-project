@@ -15,12 +15,279 @@ body {
   font-weight: 400;
   line-height: 1.7;
   color: #777;
-  padding: 3rem;
   box-sizing: border-box;
 }
 
+@keyframes moveToBottom {
+  from {
+    opacity: 0.3;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes moveToRight {
+  from {
+    opacity: 0.3;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes moveToLeft {
+  from {
+    opacity: 0.3;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.heading-secondary {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  background-image: -webkit-linear-gradient(to right, #7ed56f, #28b485);
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  transition: all 0.2s;
+}
+.heading-secondary:hover {
+  transform: skewX(0) skewY(1.1deg);
+}
+
+.heading-tertiary {
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.paragraph {
+  font-size: 1rem;
+}
+
+.u-center-text {
+  text-align: center;
+}
+
+.u-margin-bottom-8 {
+  margin-bottom: 0.5rem;
+}
+
+.u-margin-bottom-normal {
+  margin-bottom: 1rem;
+}
+
+.u-margin-bottom-small {
+  margin-bottom: 0.5rem;
+}
+
+.u-margin-bottom-larger {
+  margin-bottom: 1.5rem;
+}
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem 3rem;
+  display: inline-block;
+  position: relative;
+}
+
+.btn--white {
+  color: black;
+  background-color: #fff;
+  border-radius: 28px;
+}
+
+.btn--animation {
+  animation: moveToBottom 5s ease;
+}
+
+.btn--animation::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+  background-color: #fff;
+}
+
+.btn--animation:hover::after {
+  transform: scaleX(1.5) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn-text {
+  text-decoration: unset;
+}
+.btn-text:link, .btn-text:visited {
+  color: #55c57a;
+  padding: 0.5rem 0.5rem;
+  font-size: 1rem;
+  border-bottom: 1px solid #55c57a;
+}
+.btn-text:hover {
+  background-color: #55c57a;
+  color: #fff;
+}
+.btn-text:active {
+  border-bottom: unset;
+}
+
+.composition {
+  position: relative;
+}
+.composition__photo {
+  width: 70%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 2px;
+  box-shadow: 0 0.5rem 0.4rem -0.4rem black;
+  position: absolute;
+  transition: all 0.5s;
+}
+.composition__photo--p1 {
+  left: 0;
+  top: 0;
+}
+.composition__photo--p1:hover {
+  z-index: 20;
+  transform: scale(1.2, 1.2);
+}
+.composition__photo--p2 {
+  left: 16rem;
+  top: 2rem;
+}
+.composition__photo--p2:hover {
+  z-index: 20;
+  transform: scale(1.2, 1.2);
+}
+.composition__photo--p3 {
+  top: 7rem;
+  left: 7rem;
+}
+.composition__photo--p3:hover {
+  z-index: 20;
+  transform: scale(1.2, 1.2);
+}
+
+[class*=col-] {
+  float: left;
+  padding: 15px;
+  border: 1px solid red;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.col-1 {
+  width: 8.33%;
+}
+
+.col-2 {
+  width: 16.66%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-5 {
+  width: 41.66%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33%;
+}
+
+.col-8 {
+  width: 66.66%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33%;
+}
+
+.col-11 {
+  width: 91.66%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
 .header {
-  background-image: url("/img/my-icon.jpeg");
+  background-image: linear-gradient(to right bottom, #e13b3b54, #79d4f0), url("../../img/my-icon.jpeg");
+  height: 95vh;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%);
+}
+
+.header__text-box {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 40%;
+  width: max-content;
+  text-align: center;
+}
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
+
+.heading-primary__main {
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: 3.1rem;
+  display: block;
+  animation: moveToRight 5s backwards;
+}
+
+.heading-primary__sub {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 1.4rem;
+  display: block;
+  animation: moveToLeft 5s backwards;
+}
+
+.section-about {
+  background-color: #f7f7f7f7;
+  padding: 15rem 0;
+  margin-top: -20vh;
 }
 
 /*# sourceMappingURL=style.css.map */

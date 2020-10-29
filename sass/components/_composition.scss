@@ -1,0 +1,55 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixin' as *;
+
+.composition {
+    position: relative;
+    &__photo {
+        width: 70%;
+        max-width: 300px;
+        height: auto;
+        border-radius: 2px;
+        box-shadow: 0 .5rem .4rem -.4rem black;
+        position: absolute;
+        transition: all .5s;
+    }
+    &__photo::after, &__photo::before {
+        // z-index: -1;
+        // position: absolute;
+        // content: "";
+        // bottom: 25px;
+        // left: 10px;
+        // width: 50%;
+        // top: 80%;
+        // max-width:300px;
+        // background: #777;
+        // -webkit-box-shadow: 0 35px 20px #777;
+        // -moz-box-shadow: 0 35px 20px #777;
+        // box-shadow: 0 35px 20px #777;
+        // -webkit-transform: rotate(-8deg);
+        // -moz-transform: rotate(-8deg);
+        // -o-transform: rotate(-8deg);
+        // -ms-transform: rotate(-8deg);
+        // transform: rotate(-8deg);
+    }
+    &__photo--p1 {
+        left: 0;
+        top: 0;
+        &:hover {
+            @include hover-zoom;
+        }
+    }
+    &__photo--p2 {
+        left: 16rem;
+        top: 2rem;
+        &:hover {
+            @include hover-zoom;
+        }
+    }
+    &__photo--p3 {
+        top: 7rem;
+        left: 7rem;
+        &:hover {
+            @include hover-zoom;
+        }
+    }
+}
