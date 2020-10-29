@@ -184,6 +184,131 @@ body {
   transform: scale(1.2, 1.2);
 }
 
+.feature-box {
+  height: 320px;
+  max-width: 250px;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 4px;
+  text-align: center;
+  transition: all 0.5s;
+}
+.feature-box__text {
+  display: block;
+}
+.feature-box__icon {
+  margin-bottom: 1rem;
+}
+.feature-box__heading {
+  margin-bottom: 1.5rem;
+}
+.feature-box .icon-back-word {
+  background-image: linear-gradient(to right, rgba(185, 81, 63, 0.33), rgba(25, 119, 11, 0.68));
+  width: 50px;
+  height: 50px;
+  display: block;
+  background-color: white;
+  background-size: cover;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  position: relative;
+  color: transparent;
+  -webkit-background-clip: text;
+  font-size: 2.5rem;
+}
+.feature-box:hover {
+  transform: translate(0, -1rem);
+}
+
+.card {
+  height: 30rem;
+  position: relative;
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  box-shadow: 0 0.5rem 0.4rem -0.4rem black;
+  max-width: 250px;
+}
+.card__side {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(100, 100, 100, 0.5);
+  border: 1px solid red;
+  text-align: center;
+  transition: all 0.5s;
+  backface-visibility: hidden;
+}
+.card__side--front {
+  background-color: #fff;
+  transform: rotateY(0deg);
+}
+.card__side--back {
+  background-color: #ffb900;
+  transform: rotateY(180deg);
+}
+.card:hover .card__side--front {
+  transform: rotateY(180deg);
+}
+.card:hover .card__side--back {
+  transform: rotateY(0deg);
+}
+.card__picture {
+  height: 13rem;
+  width: 100%;
+  background-size: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+}
+.card__picture--1 {
+  background-image: linear-gradient(to right, rgba(255, 185, 0, 0.25), rgba(255, 119, 48, 0.55)), url("../../img/natural-2.jpg");
+  position: relative;
+}
+.card__picture--2 {
+  background-image: linear-gradient(to right, rgba(126, 213, 111, 0.25), rgba(40, 180, 133, 0.55)), url("../../img/natural-1.jpg");
+  position: relative;
+}
+.card__picture--3 {
+  background-image: linear-gradient(to right, rgba(41, 152, 255, 0.25), rgba(86, 67, 250, 0.55)), url("../../img/natural-3.jpg");
+  position: relative;
+}
+.card__heading {
+  font-size: 1.5rem;
+  color: #fff;
+  position: absolute;
+  right: 1rem;
+  text-transform: uppercase;
+  top: 6.8rem;
+  max-width: 70%;
+  text-align: right;
+}
+.card__heading-span {
+  padding: 1rem 1.5rem;
+  text-align: right;
+  line-height: 1.9;
+}
+.card__heading-span--1 {
+  background-image: linear-gradient(to left bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85));
+}
+.card__heading-span--2 {
+  background-image: linear-gradient(to left bottom, rgba(126, 213, 111, 0.85), rgba(40, 180, 133, 0.85));
+}
+.card__heading-span--3 {
+  background-image: linear-gradient(to left bottom, rgba(41, 152, 255, 0.85), rgba(86, 67, 250, 0.85));
+}
+.card__details {
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+}
+.card__details ul {
+  list-style-type: none;
+}
+.card__details ul li {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #777;
+}
+.card__details ul li:last-child {
+  border: unset;
+}
+
 [class*=col-] {
   float: left;
   padding: 15px;
@@ -288,6 +413,20 @@ body {
   background-color: #f7f7f7f7;
   padding: 15rem 0;
   margin-top: -20vh;
+}
+
+.section-feature {
+  background-image: linear-gradient(to right, rgba(221, 205, 202, 0.2), rgba(236, 42, 7, 0.2)), url("../../img/natural-2.jpg");
+  padding: 15rem 0;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  clip-path: polygon(0 20vh, 100% 0%, 100% 75ch, 0% 100%);
+  margin-top: -20vh;
+}
+
+.section-tour {
+  padding: 15rem 0;
 }
 
 /*# sourceMappingURL=style.css.map */

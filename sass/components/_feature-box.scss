@@ -1,0 +1,42 @@
+@use '../abstracts/variables' as *;
+
+.feature-box {
+    height: 320px;
+    max-width: 250px;
+    background-color: $color-white;
+    padding: 1rem;
+    border-radius: 4px;
+    text-align: center;
+    transition:  all .5s;
+
+    &__text {
+        display: block;
+    }
+
+    &__icon {
+        margin-bottom: 1rem;
+    }
+
+    &__heading {
+        margin-bottom: 1.5rem;
+    }
+
+    .icon-back-word {
+        background-image: linear-gradient(to right, rgba(185, 81, 63, 0.33), rgba(25, 119, 11, 0.68));
+        width: 50px;
+        height: 50px;
+        display: block;
+        background-color: white;
+        background-size: cover;
+        margin: 0 auto;
+        margin-bottom: 1rem;
+        position: relative;
+        color: transparent;
+        -webkit-background-clip: text;
+        font-size: 2.5rem;
+    }
+
+    &:hover {
+        transform: translate(0, -1rem);
+    }
+}
