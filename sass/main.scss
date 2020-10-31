@@ -16,11 +16,15 @@
 @use './components/composition' as *;
 @use './components/feature-box';
 @use './components/card';
+@use './components/story';
+@use './components/bg-video';
+@use './components/form';
 
 // Layout 
 
 @use './layout/header';
 @use './layout/grid';
+@use './layout/footer';
 
 // Page 
 @use './pages/header' as *;

@@ -1,0 +1,49 @@
+@use '../abstracts/variables' as *;
+
+.footer {
+    padding: 6rem 8rem;
+    background-color: $color-ocean-dark;
+
+    &__logo-box {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+        background-image: linear-gradient(to bottom, red, green);
+        color: transparent;
+        -webkit-background-clip: text;
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    &__logo {
+        font-size: 6rem;
+    }
+
+    &__list {
+        border-top: 1px solid $color-ocean-light;
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        padding: .8rem 0;
+    }
+
+    &__item {
+        padding: 0 1rem;
+        &:first-child {
+            padding-left: unset;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $color-red-light;
+        transition: all .5s;
+        font-size: 1.2rem;
+
+        &:hover {
+            transform: skewY(3deg) scale(1.2);
+            display: block;
+        }
+    }
+
+}
