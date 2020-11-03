@@ -1,0 +1,57 @@
+@use '../abstracts/variables' as *;
+
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba($color-black, .8);
+    padding-top: 50px;
+    z-index: 1700;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all .3s;
+
+    visibility: hidden;
+
+    &__content {
+        background-color: #fefefe;
+        margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+        border: 1px solid rgba($color-black, .8);
+        width: 80%; /* Could be more or less, depending on screen size */
+        min-height: 500px;
+        border-radius: 4px;
+        transform: translate(-50%, -50%) scale(.5);
+        transition: all .9s;
+        opacity: 0;
+    }
+
+    &:target {
+        visibility: visible;
+    }
+    &:target > &__content {
+        transform: unset;
+        opacity: 1;
+    }
+
+    &__close {
+        &:link, 
+        &:visited {
+            color: $color-grey-dark;
+            text-decoration: none;
+            font-size: 2rem;
+            padding: .5rem;
+            transition: all 0.8s;
+        }
+        &:hover {
+            color: $color-primary;
+        }
+    }
+}

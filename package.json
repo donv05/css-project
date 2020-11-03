@@ -4,7 +4,9 @@
   "description": "Practice css # Three pillars to write good html and css.. and build good websites",
   "main": "n",
   "scripts": {
-    "test": "n"
+    "test": "n",
+    "sass": "sass sass/main.scss css/style.css"
+
   },
   "repository": {
     "type": "git",

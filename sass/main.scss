@@ -19,12 +19,15 @@
 @use './components/story';
 @use './components/bg-video';
 @use './components/form';
+@use './components/popup';
 
 // Layout 
 
 @use './layout/header';
 @use './layout/grid';
 @use './layout/footer';
+@use './layout/navigation';
+
 
 // Page 
 @use './pages/header' as *;

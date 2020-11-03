@@ -21,7 +21,34 @@
 
     <!-- Body -->
     <body>
-        <!--Head-->
+        
+        <!-- navigation  -->
+        <div class="navigation">
+            <input class="navigation__checkbox" id="navi-toggle" type="checkbox">
+            <label class="navigation__button" for="navi-toggle" >
+                <span class="navigation__icon"></span>
+            </label>
+            <div class="navigation__bg"></div>
+
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link">About me</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link">Skills</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link">Adventure</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link">Chart</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!--head-->
         <header class="header">
             <div class="header__logo-box">
                 <!-- <img src="" alt="logo" class="header__logo"> -->
@@ -31,7 +58,7 @@
                     <span class="heading-primary__main">Outdoors</span>
                     <span class="heading-primary__sub">is where life happens</span>
                 </h1>
-                <a href="#" class="btn btn--white btn--animation">Discover</a>
+                <a href="#popup" class="btn btn--white btn--animation">Discover</a>
             </div>
         </header>
 
@@ -126,7 +153,7 @@
                 </div>
             </section>
 
-            <section class="section-tour">
+            <section class="section-tour" id="section-tour">
                 <div class="u-center-text u-margin-bottom-8">
                     <h2 class="heading-secondary">
                         Most Popular Tours
@@ -280,22 +307,36 @@
                             <div class="book__form">
                                 <form class="form">
                                     <div class="form__group">
-                                        <label class="form__lable" for="fname">First name:</label><br>
-                                        <input class="form__input" type="text" id="fname" name="fname"><br>
-                                    </div>
-                                    <div class="form_group">
-                                        <label class="form__lable" for="lname">Last name:</label><br>
-                                        <input class="form__input" type="text" id="lname" name="lname">
-                                    </div>
-                                    <div class="form_group">
-                                        <input type="radio" id="male" name="gender" value="male">
-                                        <label class="form__lable" for="male">Male</label>
+                                        <input class="form__input" placeholder="First name" type="input" id="fname" name="fname">
+                                        <label class="form__label form__label--input" for="fname">First name</label>
                                     </div>
 
-                                    <div class="form_group">
-                                        <input type="radio" id="female" name="gender" value="female">
-                                        <label class="form__lable" for="female">Female</label>
+                                    <div class="form__group">
+                                        <input class="form__input" placeholder="First name" type="input" id="lname" name="lname">
+                                        <label class="form__label form__label--input" for="lname">Last name</label>
                                     </div>
+
+                                    <div class="form__group">
+                                        <div class="form__radio-group form__radio-group--mg-r">
+                                            <input class="form__radio" type="radio" checked="checked" id="male" name="gender" value="male">
+                                            <label class="form__label form__label--radio" for="male">
+                                                <span class="form__radio-button"></span>
+                                                Small tour group
+                                            </label>
+                                        </div>
+                                        <div class="form__radio-group"> 
+                                            <input class="form__radio" type="radio" id="female" name="gender" value="female">
+                                            <label class="form__label form__label--radio" for="female">
+                                                <span class="form__radio-button"></span>
+                                                Larg tour group
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form__group">
+                                        <button type="button" class="btn btn--green">Next step &rarr;</button>
+                                    </div>
+
                                   </form> 
                             </div>
                         </div>
@@ -304,6 +345,7 @@
             </section>
         </main>
 
+        <!-- footer  -->
         <footer class="footer">
             <div class="footer__logo-box">
                 <i class="footer__logo fab fa-angellist"></i>
@@ -325,5 +367,18 @@
                 </div>
             </div>
         </footer>
+
+        <!-- popup  -->
+        <div class="popup" id="popup">
+            <div class="popup__content">
+                <a href="#section-tour" class="popup__close">&times;</a>
+                <div class="popup__left">
+                    content
+                </div>
+                <div class="popup__right">
+                    content
+                </div>
+            </div>
+        </div>
     </body>
 </html>
